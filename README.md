@@ -9,12 +9,14 @@ and follow next go code organization https://golang.org/doc/code.html
 To start up this example run commands below.
 
 cd to your Go working directory
+```
 cd $GOPATH/src/github.com/{user}
+```
 
 clone repo from github.com
 
 ```
-$ git clone ...
+$ git clone git@github.com:AnyChart/golang-template.git
 ```
 
 cd to cloned repo
