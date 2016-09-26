@@ -21,17 +21,17 @@ $ git clone git@github.com:AnyChart/golang-template.git
 
 cd to cloned repo
 ```
-$ cd demo
+$ cd golang-template
 ```
 
 compile demo
 ```
-$ go install github.com/{user}/demo
+$ go install github.com/{user}/golang-template
 ```
 run example
 
 ```
-$ demo
+$ golang-template
 ```
 
 open browser in http://localhost:8080/
