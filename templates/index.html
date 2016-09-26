@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+<div id="container"></div>
+<script>
+    anychart.onDocumentReady(function() {
+        var chart = anychart.pie(JSON.parse({{.ChartData}}));
+        chart.title("Top 5 pancake fillings");
+        chart.container("container");
+        chart.draw();
+    });
+</script>
+</body>
+</html>
