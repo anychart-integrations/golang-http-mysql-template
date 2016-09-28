@@ -1,37 +1,38 @@
 # AnyChart GO demo example
-### Overview
 
-This example shows how to run Anychart library with Go programming language.
+## Overview
 
-### Running
-Assuming you already have Go installed (if not please check out https://golang.org/doc/install)
-and follow next go code organization https://golang.org/doc/code.html
-To start up this example run commands below.
+This example shows how to use Anychart library with the Go programming language.
 
-cd to your Go working directory
+## Running
+
+To use this sample you must have Go installed (as described at https://golang.org/doc/install), and follow the Go code organization https://golang.org/doc/code.html
+
+To start this example run commands listed below.
+
+Navigate to your Go working folder:
 ```
 cd $GOPATH/src/github.com/{user}
 ```
 
-clone repo from github.com
-
+Clone the repository from github.com:
 ```
 $ git clone git@github.com:AnyChart/golang-template.git
 ```
 
-cd to cloned repo
+Navigate to the repository folder:
 ```
 $ cd golang-template
 ```
 
-compile demo
+Compile demo:
 ```
 $ go install github.com/{user}/golang-template
 ```
-run example
 
+Run example:
 ```
 $ golang-template
 ```
 
-open browser in http://localhost:8080/
+Open browser at http://localhost:8080/
