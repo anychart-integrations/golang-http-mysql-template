@@ -72,7 +72,7 @@ $GOPATH/
 ## Technologies
 Language - Go
 Database - MySQL
-Web framework - net/http, html/template
+Web framework - net/http, html/template  
 
 ## Further Learning
 * [Documentation](https://docs.anychart.com)
