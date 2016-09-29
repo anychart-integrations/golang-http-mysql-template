@@ -47,6 +47,33 @@ $ golang-template
 
 Open browser at http://localhost:8080/
 
+## Workspace
+Your workspace should look like:
+```
+$GOPATH/
+    bin/
+    pkg/
+    src/
+        github.com/
+            {user}/
+                golang-template/
+                    public/
+                        static/
+                            css/
+                                style.css   # css file
+                    templates/
+                        index.html          # html template
+                    database_backup.sql     # MySQL database dump
+                    main.go                 # main Go code
+                    README.md
+
+```
+
+## Technologies
+Language - Go
+Database - MySQL
+Web framework - net/http, html/template
+
 ## Further Learning
 * [Documentation](https://docs.anychart.com)
 * [JavaScript API Reference](https://api.anychart.com)
