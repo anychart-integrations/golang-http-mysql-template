@@ -6,7 +6,8 @@ This example shows how to use Anychart library with the Go programming language 
 
 ## Running
 
-To use this sample you must have Go installed (as described at https://golang.org/doc/install), and follow the Go code organization https://golang.org/doc/code.html
+To use this sample you must have Go installed (as described at https://golang.org/doc/install), and follow the Go code organization https://golang.org/doc/code.html;
+MySQL installed and running (if not please check out https://dev.mysql.com/downloads/installer/ and follow instructions http://dev.mysql.com/doc/refman/5.7/en/installing.html)
 
 To start this example run commands listed below.
 
