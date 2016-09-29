@@ -2,7 +2,7 @@
 
 ## Overview
 
-This example shows how to use Anychart library with the Go programming language.
+This example shows how to use Anychart library with the Go programming language and MySQL database.
 
 ## Running
 
@@ -25,9 +25,19 @@ Navigate to the repository folder:
 $ cd golang-template
 ```
 
+Install dependencies:
+```
+$ go get ./...
+```
+
 Compile demo:
 ```
 $ go install github.com/{user}/golang-template
+```
+
+Set up MySQL database, use -u -p flags to provide your user name and password:
+```
+$  mysql < database_backup.sql
 ```
 
 Run example:

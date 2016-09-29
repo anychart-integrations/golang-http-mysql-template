@@ -5,11 +5,14 @@ import (
 	"html/template"
 	"encoding/json"
 	"log"
+	"database/sql"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 // declare page type
 type Page struct {
-	Title string
+	Title     string
+	ChartTitle string
 	ChartData string
 }
 
@@ -19,22 +22,44 @@ type Serie struct {
 	Value int    `json:"value"`
 }
 
-// define and init page template
+// define db and page template
+var db *sql.DB
 var pageTemplate *template.Template
 
+// init db and page template
 func init() {
 	pageTemplate = template.Must(template.ParseFiles("templates/index.html"))
+	var err error
+	db, err = sql.Open("mysql", "anychart_user:anychart_pass@/anychart_db")
+	if err != nil {
+		panic(err)
+	}
+}
+
+// get top fruits from database
+func getFruits(count int) []Serie {
+	res, err := db.Query("SELECT * FROM fruits ORDER BY value DESC LIMIT ?", count)
+	if err != nil {
+		panic(err)
+	}
+	var	(
+		id, value int
+		name string
+		series []Serie
+	)
+	for res.Next() {
+		err = res.Scan(&id, &name, &value)
+		if err != nil {
+			panic(err)
+		}
+		series = append(series, Serie{name, value})
+	}
+	return series
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	// assuming your have data
-	data := []Serie{
-		{"Chocolate", 5},
-		{"Rhubarb compote", 2},
-		{"Crêpe Suzette", 2},
-		{"American blueberry", 2},
-		{"Buttermilk", 1},
-	}
+	// get chart data
+	data := getFruits(5)
 	// decode chart data to JSON
 	b, err := json.Marshal(data)
 	if err != nil {
@@ -44,11 +69,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	// init page data and run template
 	page := &Page{
 		Title: "Anychart Golang example",
+		ChartTitle: "Top 5 fruits",
 		ChartData: string(b),
 	}
 	pageTemplate.Execute(w, page)
 }
-
 
 func main() {
 	// define routes
@@ -60,5 +85,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer db.Close()
 }
 

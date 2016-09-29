@@ -12,7 +12,7 @@
 <script>
     anychart.onDocumentReady(function() {
         var chart = anychart.pie(JSON.parse({{.ChartData}}));
-        chart.title("Top 5 pancake fillings");
+        chart.title("{{.ChartTitle}}");
         chart.container("container");
         chart.draw();
     });
