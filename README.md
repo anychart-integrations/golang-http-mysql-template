@@ -80,9 +80,9 @@ $GOPATH/
 ```
 
 ## Technologies
-Language - Go<br />
-Database - MySQL<br />
-Web framework - net/http, html/template<br />
+Language - [Go](https://golang.org/)<br />
+Database - [MySQL](https://www.mysql.com/)<br />
+Web framework - [net/http](https://golang.org/pkg/net/http), [html/template](https://golang.org/pkg/html/template/)<br />
 
 ## Further Learning
 * [Documentation](https://docs.anychart.com)
