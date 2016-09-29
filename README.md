@@ -36,3 +36,9 @@ $ golang-template
 ```
 
 Open browser at http://localhost:8080/
+
+## Further Learning
+* [Documentation](https://docs.anychart.com)
+* [JavaScript API Reference](https://api.anychart.com)
+* [Code Playground](https://playground.anychart.com)
+* [Technical Support](https://anychart.com/support)
