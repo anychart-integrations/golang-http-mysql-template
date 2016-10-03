@@ -1,6 +1,5 @@
-# AnyChart GO demo example
-
-## Overview
+![AnyChart GO template](https://cdn.anychart.com/images/anychart-logo-medium.png) AnyChart GO template
+=========================
 
 This example shows how to use Anychart library with the Go programming language and MySQL database.
 
