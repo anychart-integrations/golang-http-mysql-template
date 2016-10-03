@@ -1,4 +1,5 @@
-<img src="https://cdn.anychart.com/images/anychart-logo-medium.png" alt="AnyChart GO template" width="48" style="margin-bottom:-12px;margin-right:5px"> AnyChart GO template
+[<img src="https://cdn.anychart.com/images/logo-blue.png" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
+Go basic template
 =========================
 
 This example shows how to use Anychart library with the Go programming language and MySQL database.
