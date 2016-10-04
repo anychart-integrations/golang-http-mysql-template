@@ -1,4 +1,4 @@
-[<img src="https://cdn.anychart.com/images/logo-transparent.png?1" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
+[<img src="https://cdn.anychart.com/images/logo-transparent-2.png" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
 Go basic template
 =========================
 
