@@ -90,4 +90,4 @@ Web framework - [net/http](https://golang.org/pkg/net/http), [html/template](htt
 * [Technical Support](https://anychart.com/support)
 
 ## License
-[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-solutions/anystock-drawing-tools-and-annotations-demo/blob/master/LICENSE).
+[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-integrations/golang-http-mysql-template/blob/master/LICENSE).
