@@ -26,12 +26,12 @@ cd $GOPATH/src/github.com/{user}
 
 Clone the repository from github.com:
 ```
-$ git clone git@github.com:AnyChart/golang-template.git
+$ git clone git@github.com:anychart-integrations/golang-http-mysql-template.git
 ```
 
 Navigate to the repository folder:
 ```
-$ cd golang-template
+$ cd golang-http-mysql-template
 ```
 
 Install dependencies:
@@ -41,7 +41,7 @@ $ go get ./...
 
 Compile demo:
 ```
-$ go install github.com/{user}/golang-template
+$ go install github.com/{user}/golang-http-mysql-template
 ```
 
 Set up MySQL database, use -u -p flags to provide username and password:
@@ -51,7 +51,7 @@ $  mysql < database_backup.sql
 
 Run example:
 ```
-$ golang-template
+$ golang-http-mysql-template
 ```
 
 Open browser at http://localhost:8080/
