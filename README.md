@@ -65,7 +65,7 @@ $GOPATH/
     src/
         github.com/
             {user}/
-                golang-template/
+                golang-http-mysql-template/
                     public/
                         static/
                             css/
