@@ -19,19 +19,14 @@ mysql  Ver 14.14 Distrib 5.5.52, for debian-linux-gnu (x86_64) using readline 6.
 
 To start this example run commands listed below.
 
-Navigate to your Go working folder:
-```
-cd $GOPATH/src/github.com/{user}
-```
-
 Clone the repository from github.com:
 ```
-$ git clone git@github.com:anychart-integrations/golang-http-mysql-template.git
+$ go get github.com/anychart-integrations/golang-http-mysql-template
 ```
 
 Navigate to the repository folder:
 ```
-$ cd golang-http-mysql-template
+cd $GOPATH/src/github.com/anychart-integrations/golang-http-mysql-template
 ```
 
 Install dependencies:
@@ -41,7 +36,7 @@ $ go get ./...
 
 Compile demo:
 ```
-$ go install github.com/{user}/golang-http-mysql-template
+$ go install github.com/anychart-integrations/golang-http-mysql-template
 ```
 
 Set up MySQL database, use -u -p flags to provide username and password:
