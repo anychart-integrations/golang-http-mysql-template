@@ -1,24 +1,25 @@
 package main
 
 import (
-	"net/http"
-	"html/template"
-	"encoding/json"
-	"log"
 	"database/sql"
+	"encoding/json"
+	"html/template"
+	"log"
+	"net/http"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
 // declare page type
 type Page struct {
-	Title     string
+	Title      string
 	ChartTitle string
-	ChartData string
+	ChartData  string
 }
 
 // declare chart serie type
 type Serie struct {
-	Name  string    `json:"name"`
+	Name  string `json:"name"`
 	Value int    `json:"value"`
 }
 
@@ -42,10 +43,11 @@ func getFruits(count int) []Serie {
 	if err != nil {
 		panic(err)
 	}
-	var	(
+	defer res.Close()
+	var (
 		id, value int
-		name string
-		series []Serie
+		name      string
+		series    []Serie
 	)
 	for res.Next() {
 		err = res.Scan(&id, &name, &value)
@@ -68,14 +70,15 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	// init page data and run template
 	page := &Page{
-		Title: "Anychart Golang example",
+		Title:      "Anychart Golang example",
 		ChartTitle: "Top 5 fruits",
-		ChartData: string(b),
+		ChartData:  string(b),
 	}
 	pageTemplate.Execute(w, page)
 }
 
 func main() {
+	defer db.Close()
 	// define routes
 	fs := http.FileServer(http.Dir("public"))
 	http.Handle("/static/", fs)
@@ -85,6 +88,4 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer db.Close()
 }
-
