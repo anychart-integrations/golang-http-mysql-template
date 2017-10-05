@@ -36,6 +36,7 @@ $ go get ./...
 Compile demo:
 ```
 $ go install github.com/anychart-integrations/golang-http-mysql-template
+$ go build
 ```
 
 Set up MySQL database, use -u -p flags to provide username and password:
